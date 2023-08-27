@@ -3,7 +3,6 @@ package edu.mum.cs.cs425.demos.studentrecordsmgmtapp.model;
 import java.time.LocalDate;
 
 public class Student {
-	
 	private long studentId;
 	private String name;
 	private LocalDate dateOfAdmission;
@@ -13,17 +12,17 @@ public class Student {
 		
 	}
 	
-	public Student(long studentId, String name, LocalDate dateOfAdmission) {		
-		this.studentId = studentId;
+	public Student(long id, String name, LocalDate dOA) {
+		this.studentId = id;
 		this.name = name;
-		this.dateOfAdmission = dateOfAdmission;
+		this.dateOfAdmission = dOA;
 	}
 	
 	public long getStudentId() {
 		return studentId;
 	}
-	public void setStudentId(long studentId) {
-		this.studentId = studentId;
+	public void setStudentId(long id) {
+		this.studentId = id;
 	}
 	public String getName() {
 		return name;
@@ -34,8 +33,8 @@ public class Student {
 	public LocalDate getDateOfAdmission() {
 		return dateOfAdmission;
 	}
-	public void setDateOfAdmission(LocalDate dateOfAdmission) {
-		this.dateOfAdmission = dateOfAdmission;
+	public void setDateOfAdmission(LocalDate dOA) {
+		this.dateOfAdmission = dOA;
 	}
 	
 	@Override

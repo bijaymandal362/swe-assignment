@@ -12,17 +12,24 @@ import edu.mum.cs.cs425.demos.studentrecordsmgmtapp.model.Student;
 public class MyStudentRecordsMgmtApp {
 
 	public static void main(String[] args) throws Exception {
-		Student s1 = new Student(110001,"Dave", LocalDate.of(1951, 11, 18));
-		Student s2 = new Student(110002,"Anna", LocalDate.of(1990, 12, 7));
-		Student s3 = new Student(110003,"Erica", LocalDate.of(1974, 1, 31));
-		Student s4 = new Student(110004,"Carlos", LocalDate.of(2009, 8, 22));
-		Student s5 = new Student(110005,"Bob", LocalDate.of(1990, 3, 5));
-		
-		Student[] students = new Student[] {s1, s2,s3,s4,s5};
+
+		List<Student> students = Arrays.asList(
+				new Student(110001, "Dave", LocalDate.of(1951, 11, 18)),
+				new Student(110002, "Anna", LocalDate.of(1990, 12, 7)),
+				new Student(110003, "Erica", LocalDate.of(1974, 1, 31)),
+				new Student(110004, "Carlos", LocalDate.of(2009, 8, 22)),
+				new Student(110005, "Bob", LocalDate.of(1990, 3, 5))
+		);
+
 		MyStudentRecordsMgmtApp studentRecord = new MyStudentRecordsMgmtApp();
-		
+
 		System.out.println("List of all students:");
 		System.out.println("______________________________________________________________");
+
+		// Print the updated list of students
+		for (Student student : students) {
+			System.out.println(student.getName());
+		}
 		studentRecord.printListOfStudents(students);
 		
 		List<Student> platinumStudents = studentRecord.getListOfPlatinumAlumniStudents(students);
